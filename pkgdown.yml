@@ -1,0 +1,10 @@
+pandoc: 1.15.2
+pkgdown: 0.1.0.9000
+pkgdown_sha: 17f683717d0a1547f13a08a259b34c58927452d6
+articles:
+  customizing_styler: customizing_styler.html
+  data_structures: gsoc_proposal/data_structures.html
+  manipulating_nested_parse_data: gsoc_proposal/manipulating_nested_parse_data.html
+  introducing_styler: introducing_styler.html
+  performance_improvements: performance_improvements.html
+
