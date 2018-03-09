@@ -133,9 +133,10 @@
 <h2 class="hasAnchor">
 <a href="#minor-changes" class="anchor"></a>Minor changes</h2>
 <ul>
-<li>We’re now recognizing and respecting DSLs used in R comments: rplumnber (<code>#*</code>, #306), shebang <code>#/!</code> (#345), knitr chunk headers for spinning (<code>#+</code> / <code>#-</code>, #362).</li>
+<li>We’re now recognizing and respecting more DSLs used in R comments: rplumber (<code>#*</code>, #306), shebang <code>#/!</code> (#345), knitr chunk headers for spinning (<code>#+</code> / <code>#-</code>, #362).</li>
 <li>Named arguments can stay on the first line if call is multi-line (#318).</li>
 <li>No space anymore with <code><a href="reference/tidyverse_style.html">tidyverse_style()</a></code> after <code>!!</code> since with <code>rlang 0.2</code>, <code>!!</code> now binds tighter (#322), spacing around <code>~</code> (#316), no space anymore around <code>^</code> (#308).</li>
+<li>Code chunks in Rmd documents that don’t use the R engine are no longer formatted (#313).</li>
 <li>Various bug fixes and edge case improvements.</li>
 </ul>
 <p>Thanks to all contributors for patches, issues and the like: @devSJR, @klrmlr, @yutannihilation, @samhinshaw, @martin-mfg, @jjramsey, @RMHogervorst, @wlandau, @llrs, @aaronrudkin, @crew102, @jkgrain, @jennybc,</p>
