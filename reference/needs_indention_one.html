@@ -25,11 +25,12 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
 <meta property="og:title" content="Check whether indention is needed — needs_indention_one" />
 
-<meta property="og:description" content="Indention is needed if the two conditions apply:" />
+<meta property="og:description" content="Determine whether the tokens corresponding to potential_trigger_pos should
+cause indention, considering that there might be other potential triggers
+other_trigger_tokens that are going to cause indention.
+Indention is needed if the two conditions apply:" />
 <meta name="twitter:card" content="summary" />
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
@@ -117,7 +118,10 @@
     </div>
 
     
-    <p>Indention is needed if the two conditions apply:</p>
+    <p>Determine whether the tokens corresponding to <code>potential_trigger_pos</code> should
+cause indention, considering that there might be other potential triggers
+<code>other_trigger_tokens</code> that are going to cause indention.
+Indention is needed if the two conditions apply:</p>
     
 
     <pre class="usage"><span class='fu'>needs_indention_one</span>(<span class='no'>pd</span>, <span class='no'>potential_trigger_pos</span>, <span class='no'>other_trigger_tokens</span>)</pre>
@@ -137,25 +141,34 @@ for which it should be checked whether it should trigger indention.</p></td>
     <tr>
       <th>other_trigger_tokens</th>
       <td><p>Other tokens that are going to cause indention
-if on the same line as the token corresponding to <code>potential_trigger</code>.</p></td>
+if on the same line as the token corresponding to <code>potential_trigger</code> and
+directly followed by a line break.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Returns <code>TRUE</code> if indention is needed, <code>FALSE</code> otherwise.
-
-<code>TRUE</code> if indention is needed, <code>FALSE</code> otherwise.</p>
+    <p>Returns <code>TRUE</code> if indention is needed, <code>FALSE</code> otherwise.</p>
+<p><code>TRUE</code> if indention is needed, <code>FALSE</code> otherwise.</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <ul>
 <li><p>there is no multi-line token between the trigger and the first line break.</p></li>
 <li><p>there is no other token between the potential trigger and the first line
-break that is going to cause indention.</p></li>
+break that is going to cause indention. Note that such an other trigger
+only causes indention if there is a line break after that other triggering
+token, not otherwise. If it causes indention, it is said to be an active
+trigger, if it does not, it is called an inactive trigger.
+See 'Details' for an example where there is an other trigger token, but
+since the next token is on the same line as the other trigger,
+the trigger is passive.</p></li>
 </ul>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'><a href='style_text.html'>style_text</a></span>(<span class='st'>"call(named = c, \nnamed = b)"</span>, <span class='kw'>strict</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; call(named = c,
+#&gt;   named = b)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -165,7 +178,9 @@ break that is going to cause indention.</p></li>
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
