@@ -32,6 +32,8 @@ outer_indent is added to all tokens in pd, outer_spaces is added to the
 last token in pd. context_to_terminals() calls this function repeatedly,
 which means the propagation of the parse information to the terminal tokens." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -54,8 +56,12 @@ which means the propagation of the parse information to the terminal tokens." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -92,7 +98,7 @@ which means the propagation of the parse information to the terminal tokens." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -115,6 +121,7 @@ which means the propagation of the parse information to the terminal tokens." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Update the a parse table given outer context</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/visit.R'><code>R/visit.R</code></a></small>
     </div>
 
     
@@ -127,7 +134,7 @@ which means the propagation of the parse information to the terminal tokens.</p>
     <pre class="usage"><span class='fu'>context_towards_terminals</span>(<span class='no'>pd_nested</span>, <span class='no'>outer_lag_newlines</span>, <span class='no'>outer_indent</span>,
   <span class='no'>outer_spaces</span>, <span class='no'>outer_indention_refs</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

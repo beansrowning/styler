@@ -30,6 +30,8 @@
 <meta property="og:description" content="Run transformations on all *-in.R files in a test directory and compare them
 with their *-out.R counterpart." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -52,8 +54,12 @@ with their *-out.R counterpart." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -90,7 +96,7 @@ with their *-out.R counterpart." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -113,6 +119,7 @@ with their *-out.R counterpart." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Run a collection of tests</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/testing.R'><code>R/testing.R</code></a></small>
     </div>
 
     
@@ -123,7 +130,7 @@ with their *-out.R counterpart.</p>
     <pre class="usage"><span class='fu'>test_collection</span>(<span class='no'>test</span>, <span class='kw'>sub_test</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>write_back</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>write_tree</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
   <span class='no'>transformer</span>, <span class='no'>...</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

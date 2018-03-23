@@ -32,6 +32,8 @@ target_token as a reference. This includes adding spaces to the first
 tokens on a line and updating the column col1 and col2 for all tokens
 on that line so they are kept updated." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -54,8 +56,12 @@ on that line so they are kept updated." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -92,7 +98,7 @@ on that line so they are kept updated." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -115,6 +121,7 @@ on that line so they are kept updated." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Applying reference indention of a target token</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/reindent.R'><code>R/reindent.R</code></a></small>
     </div>
 
     
@@ -126,7 +133,7 @@ on that line so they are kept updated.</p>
 
     <pre class="usage"><span class='fu'>apply_ref_indention_one</span>(<span class='no'>flattened_pd</span>, <span class='no'>target_token</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

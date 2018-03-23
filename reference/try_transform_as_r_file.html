@@ -32,6 +32,8 @@ likely not a .R file, so saving the file and try styling again will work if
 the file is an .Rmd file. Otherwise, we can throw an error that the file must
 be a .R or .Rmd file." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -54,8 +56,12 @@ be a .R or .Rmd file." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -92,7 +98,7 @@ be a .R or .Rmd file." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -115,6 +121,7 @@ be a .R or .Rmd file." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Style a file as if it was an .R file</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/addins.R'><code>R/addins.R</code></a></small>
     </div>
 
     
@@ -126,7 +133,7 @@ be a .R or .Rmd file.</p>
 
     <pre class="usage"><span class='fu'>try_transform_as_r_file</span>(<span class='no'>context</span>, <span class='no'>transformer</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

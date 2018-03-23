@@ -31,6 +31,8 @@
 expression pattern to be a certain amount of spaces. The rule
 is only active for the first tokens on a line." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -53,8 +55,12 @@ is only active for the first tokens on a line." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -91,7 +97,7 @@ is only active for the first tokens on a line." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -114,6 +120,7 @@ is only active for the first tokens on a line." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Set indention of tokens that match regex</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/reindent.R'><code>R/reindent.R</code></a></small>
     </div>
 
     
@@ -125,7 +132,7 @@ is only active for the first tokens on a line.</p>
     <pre class="usage"><span class='fu'>set_regex_indention</span>(<span class='no'>flattened_pd</span>, <span class='no'>pattern</span>, <span class='kw'>target_indention</span> <span class='kw'>=</span> <span class='fl'>0</span>,
   <span class='kw'>comments_only</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

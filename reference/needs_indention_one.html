@@ -32,6 +32,8 @@ cause indention, considering that there might be other potential triggers
 other_trigger_tokens that are going to cause indention.
 Indention is needed if the two conditions apply:" />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -54,8 +56,12 @@ Indention is needed if the two conditions apply:" />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -92,7 +98,7 @@ Indention is needed if the two conditions apply:" />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -115,6 +121,7 @@ Indention is needed if the two conditions apply:" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Check whether indention is needed</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/indent.R'><code>R/indent.R</code></a></small>
     </div>
 
     
@@ -126,7 +133,7 @@ Indention is needed if the two conditions apply:</p>
 
     <pre class="usage"><span class='fu'>needs_indention_one</span>(<span class='no'>pd</span>, <span class='no'>potential_trigger_pos</span>, <span class='no'>other_trigger_tokens</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

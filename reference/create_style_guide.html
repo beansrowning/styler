@@ -33,6 +33,8 @@ transformer function corresponds to one styling rule. The output of this
 function can be used as an argument for style in top level functions
 like style_text() and friends." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -55,8 +57,12 @@ like style_text() and friends." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -93,7 +99,7 @@ like style_text() and friends." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -116,6 +122,7 @@ like style_text() and friends." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Create a style guide</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/style-guides.R'><code>R/style-guides.R</code></a></small>
     </div>
 
     
@@ -130,7 +137,7 @@ like <code><a href='style_text.html'>style_text()</a></code> and friends.</p>
   <span class='kw'>line_break</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>space</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>token</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>indention</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>use_raw_indention</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>reindention</span> <span class='kw'>=</span> <span class='fu'><a href='reindention.html'>tidyverse_reindention</a></span>())</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

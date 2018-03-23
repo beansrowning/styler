@@ -32,6 +32,8 @@ position of the first named argument and breaks returns the index of it.
 If there is no named argument, the line is broken right after the opening
 parenthesis." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -54,8 +56,12 @@ parenthesis." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -92,7 +98,7 @@ parenthesis." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -115,6 +121,7 @@ parenthesis." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Find index of the token before which the line should be broken</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/rules-line-break.R'><code>R/rules-line-break.R</code></a></small>
     </div>
 
     
@@ -126,7 +133,7 @@ parenthesis.</p>
 
     <pre class="usage"><span class='fu'>find_line_break_position_in_multiline_call</span>(<span class='no'>pd</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>All news • styler</title>
+<title>Changelog • styler</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,7 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-<meta property="og:title" content="All news" />
+<meta property="og:title" content="Changelog" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -48,8 +50,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -86,7 +92,7 @@
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -109,7 +115,8 @@
 
   <div class="col-md-9">
     <div class="page-header">
-      <h1>Change log <small>All releases</small></h1>
+      <h1>Changelog <small></small></h1>
+      <small>Source: <a href='https://github.com/r-lib/styler/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
     <div class="contents">
@@ -118,7 +125,77 @@
 <a href="#styler-1-0-1-2018-03-02" class="anchor"></a>styler 1.0.1 (2018-03-02)</h2>
 <p>This is a maintenance release without any breaking API changes.</p>
 </div>
-    NA
+    <div id="styler-1-0-0-2017-12-05" class="section level2">
+<h2 class="hasAnchor">
+<a href="#styler-1-0-0-2017-12-05" class="anchor"></a>styler 1.0.0 (2017-12-05)</h2>
+<p>Initial release.</p>
+<div id="stylers" class="section level3">
+<h3 class="hasAnchor">
+<a href="#stylers" class="anchor"></a>stylers</h3>
+<p>These are functions used to style code. They style a directory, a whole package, a file or a string.</p>
+<pre><code><a href="../reference/style_dir.html">style_dir(path = ".", 
+  ..., style = tidyverse_style, transformers = style(...), 
+  filetype = "R", recursive = TRUE, exclude_files = NULL
+)
+
+style_pkg(pkg = ".", 
+  ..., style = tidyverse_style, transformers = style(...), filetype = "R", 
+  exclude_files = "R/RcppExports.R"
+)
+
+
+style_file(path, 
+  ..., style = tidyverse_style, transformers = style(...)
+)
+
+style_text(text, ..., style = tidyverse_style, transformers = style(...))</a></code></pre>
+</div>
+<div id="style-guides" class="section level3">
+<h3 class="hasAnchor">
+<a href="#style-guides" class="anchor"></a>style guides</h3>
+<p>These functions are the style guides implemented.</p>
+<pre><code>tidyverse_style(
+  scope = "tokens", 
+  strict = TRUE, 
+  indent_by = 2, 
+  start_comments_with_one_space = FALSE, 
+  reindention = tidyverse_reindention(), 
+  math_token_spacing = tidyverse_math_token_spacing()
+)
+tidyverse_reindention()
+tidyverse_math_token_spacing())</code></pre>
+</div>
+<div id="style-guide-creators" class="section level3">
+<h3 class="hasAnchor">
+<a href="#style-guide-creators" class="anchor"></a>style guide creators</h3>
+<p>This function is used to create a style guide.</p>
+<pre><code><a href="../reference/create_style_guide.html">create_style_guide(
+  initialize = default_style_guide_attributes, 
+  line_break = NULL, 
+  space = NULL, 
+  token = NULL, 
+  indention = NULL, 
+  use_raw_indention = FALSE, 
+  reindention = tidyverse_reindention()
+)</a></code></pre>
+</div>
+<div id="helpers" class="section level3">
+<h3 class="hasAnchor">
+<a href="#helpers" class="anchor"></a>Helpers</h3>
+<p>These are helper functions used to specify the style guides in use.</p>
+<pre><code><a href="../reference/math_token_spacing.html">specify_math_token_spacing(
+  zero = NULL, 
+  one = c("'+'", "'-'", "'*'", "'/'", "'^'")
+)
+
+specify_reindention(
+  regex_pattern = NULL, 
+  indention = 0, 
+  comments_only = TRUE
+)
+initialize_default_attributes(pd_flat)</a></code></pre>
+</div>
+</div>
     </div>
   </div>
 
@@ -127,7 +204,7 @@
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
         <li><a href="#styler-1-0-1-2018-03-02">1.0.1</a></li>
-        <li><a href="#NA">NA</a></li>
+        <li><a href="#styler-1-0-0-2017-12-05">1.0.0</a></li>
       </ul>
     </div>
   </div>

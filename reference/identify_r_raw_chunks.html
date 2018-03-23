@@ -31,6 +31,8 @@
 contain a header and footer of markdown. Only code chunks that have an engine
 whose name matches engine-pattern are considered as R code." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -53,8 +55,12 @@ whose name matches engine-pattern are considered as R code." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -91,7 +97,7 @@ whose name matches engine-pattern are considered as R code." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -114,6 +120,7 @@ whose name matches engine-pattern are considered as R code." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Identifies raw R code chunks</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/transform-code.R'><code>R/transform-code.R</code></a></small>
     </div>
 
     
@@ -124,7 +131,7 @@ whose name matches <code>engine-pattern</code> are considered as R code.</p>
 
     <pre class="usage"><span class='fu'>identify_r_raw_chunks</span>(<span class='no'>lines</span>, <span class='kw'>engine_pattern</span> <span class='kw'>=</span> <span class='fu'><a href='get_engine_pattern.html'>get_engine_pattern</a></span>())</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

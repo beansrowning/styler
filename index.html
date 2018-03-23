@@ -28,8 +28,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
@@ -66,7 +70,7 @@
   </ul>
 </li>
 <li>
-  <a href="news/index.html">News</a>
+  <a href="news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -126,23 +130,32 @@ remotes::<span class="kw">install_github</span>(<span class="st">"r-lib/styler"<
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2 class="hasAnchor">
-<a href="#sidebar" class="anchor"></a>Links</h2>
+    <div class="links">
+<h2>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cran.r-project.org/package=styler">https://​cran.r-project.org/​package=styler</a>
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=styler">https://​cloud.r-project.org/​package=styler</a>
 </li>
 <li>Browse source code at <br><a href="https://github.com/r-lib/styler">https://​github.com/​r-lib/​styler</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/r-lib/styler/issues">https://​github.com/​r-lib/​styler/​issues</a>
 </li>
 </ul>
+</div>
+<div class="license">
 <h2>License</h2>
-<p><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></p>
+<ul class="list-unstyled">
+<li><a href="https://www.r-project.org/Licenses/GPL-3">GPL-3</a></li>
+</ul>
+</div>
+<div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Kirill Müller <br><small class="roles"> Author </small>  </li>
 <li>Lorenz Walthert <br><small class="roles"> Maintainer, author </small>  </li>
 </ul>
+</div>
+
+      <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/r-lib/styler"><img src="https://travis-ci.org/r-lib/styler.svg?branch=master" alt="Build Status"></a></li>
@@ -151,6 +164,7 @@ remotes::<span class="kw">install_github</span>(<span class="st">"r-lib/styler"<
 <li><a href="https://codecov.io/gh/r-lib/styler"><img src="https://codecov.io/gh/r-lib/styler/branch/master/graph/badge.svg" alt="codecov"></a></li>
 <li><a href="https://cran.r-project.org/package=styler"><img src="http://www.r-pkg.org/badges/version/styler" alt="cran version"></a></li>
 </ul>
+</div>
 </div>
 
 </div>

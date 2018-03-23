@@ -32,6 +32,8 @@ x.5 and ids created with after = FALSE can have pos_id values between
 1+ x.0 and 1 + x.5 where x is the pos_id integer which was used as a
 reference to create the new pos_ids." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -54,8 +56,12 @@ reference to create the new pos_ids." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -92,7 +98,7 @@ reference to create the new pos_ids." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -115,6 +121,7 @@ reference to create the new pos_ids." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Validate sequence of new position ids</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/token-create.R'><code>R/token-create.R</code></a></small>
     </div>
 
     
@@ -126,7 +133,7 @@ reference to create the new <code>pos_ids</code>.</p>
 
     <pre class="usage"><span class='fu'>validate_new_pos_ids</span>(<span class='no'>new_ids</span>, <span class='no'>after</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

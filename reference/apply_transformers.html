@@ -31,6 +31,8 @@
 modified) and the rest of the transformers are applied afterwards,
 The former requires two pre visits and one post visit." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -53,8 +55,12 @@ The former requires two pre visits and one post visit." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -91,7 +97,7 @@ The former requires two pre visits and one post visit." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -114,6 +120,7 @@ The former requires two pre visits and one post visit." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Apply transformers to a parse table</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/transform-files.R'><code>R/transform-files.R</code></a></small>
     </div>
 
     
@@ -124,7 +131,7 @@ The former requires two pre visits and one post visit.</p>
 
     <pre class="usage"><span class='fu'>apply_transformers</span>(<span class='no'>pd_nested</span>, <span class='no'>transformers</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>

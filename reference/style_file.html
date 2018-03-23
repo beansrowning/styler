@@ -30,6 +30,8 @@
 <meta property="og:description" content="Performs various substitutions in the files specified.
 Carefully examine the results after running this function!" />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -52,8 +54,12 @@ Carefully examine the results after running this function!" />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -90,7 +96,7 @@ Carefully examine the results after running this function!" />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -113,6 +119,7 @@ Carefully examine the results after running this function!" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Style <code>.R</code> and/or <code>.Rmd</code> files</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/ui.R'><code>R/ui.R</code></a></small>
     </div>
 
     
@@ -122,7 +129,7 @@ Carefully examine the results after running this function!</p>
 
     <pre class="usage"><span class='fu'>style_file</span>(<span class='no'>path</span>, <span class='no'>...</span>, <span class='kw'>style</span> <span class='kw'>=</span> <span class='no'>tidyverse_style</span>, <span class='kw'>transformers</span> <span class='kw'>=</span> <span class='fu'>style</span>(<span class='no'>...</span>))</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
@@ -173,7 +180,7 @@ that are under version control or to create a backup copy.</p>
 <span class='no'>file</span> <span class='kw'>&lt;-</span> <span class='fu'>tempfile</span>(<span class='st'>"styler"</span>, <span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".R"</span>)
 <span class='kw pkg'>enc</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/enc/topics/write_lines_enc'>write_lines_enc</a></span>(<span class='st'>"1++1"</span>, <span class='no'>file</span>)
 <span class='fu'>style_file</span>(<span class='no'>file</span>, <span class='kw'>style</span> <span class='kw'>=</span> <span class='no'>tidyverse_style</span>, <span class='kw'>strict</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; Styling  1  files:
-#&gt;  styler4339717628a8.R ℹ 
+#&gt;  styler6bb06e90b489.R ℹ 
 #&gt; ────────────────────────────────────────
 #&gt; Status	Count	Legend 
 #&gt; ✔ 	0	File unchanged.
@@ -181,7 +188,7 @@ that are under version control or to create a backup copy.</p>
 #&gt; ✖ 	0	Styling threw an error.
 #&gt; ────────────────────────────────────────
 #&gt; Please review the changes carefully!</div><div class='input'><span class='fu'>style_file</span>(<span class='no'>file</span>, <span class='kw'>transformers</span> <span class='kw'>=</span> <span class='fu'><a href='tidyverse_style.html'>tidyverse_style</a></span>(<span class='kw'>strict</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</div><div class='output co'>#&gt; Styling  1  files:
-#&gt;  styler4339717628a8.R ✔ 
+#&gt;  styler6bb06e90b489.R ✔ 
 #&gt; ────────────────────────────────────────
 #&gt; Status	Count	Legend 
 #&gt; ✔ 	1	File unchanged.

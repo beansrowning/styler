@@ -32,6 +32,8 @@ indention, spaces and lag_newlines to inner token to terminals. This means
 that information regarding indention, line breaks and spaces (which is
 relative in pd_nested) will be converted into absolute." />
 <meta name="twitter:card" content="summary" />
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -54,8 +56,12 @@ relative in pd_nested) will be converted into absolute." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">styler</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">styler</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">1.0.1</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -92,7 +98,7 @@ relative in pd_nested) will be converted into absolute." />
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -115,6 +121,7 @@ relative in pd_nested) will be converted into absolute." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Propagate context to terminals</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/visit.R'><code>R/visit.R</code></a></small>
     </div>
 
     
@@ -127,7 +134,7 @@ relative in <code>pd_nested</code>) will be converted into absolute.</p>
     <pre class="usage"><span class='fu'>context_to_terminals</span>(<span class='no'>pd_nested</span>, <span class='no'>outer_lag_newlines</span>, <span class='no'>outer_indent</span>, <span class='no'>outer_spaces</span>,
   <span class='no'>outer_indention_refs</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
