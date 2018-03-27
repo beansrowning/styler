@@ -6,10 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Generate a comprehensive collection test cases for comment / insertion
-interaction
-Test consist of if / if-else / if-else-if-else cases, paired with various
-line-break and comment configurations. Used for internal testing. — generate_test_samples • styler</title>
+<title>Check whether a parse table contains a tilde — is_tilde_expr • styler</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -28,15 +25,9 @@ line-break and comment configurations. Used for internal testing. — generate_t
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-<meta property="og:title" content="Generate a comprehensive collection test cases for comment / insertion
-interaction
-Test consist of if / if-else / if-else-if-else cases, paired with various
-line-break and comment configurations. Used for internal testing. — generate_test_samples" />
+<meta property="og:title" content="Check whether a parse table contains a tilde — is_tilde_expr" />
 
-<meta property="og:description" content="Generate a comprehensive collection test cases for comment / insertion
-interaction
-Test consist of if / if-else / if-else-if-else cases, paired with various
-line-break and comment configurations. Used for internal testing." />
+<meta property="og:description" content="Check whether a parse table contains a tilde" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -129,36 +120,48 @@ line-break and comment configurations. Used for internal testing." />
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Generate a comprehensive collection test cases for comment / insertion
-interaction
-Test consist of if / if-else / if-else-if-else cases, paired with various
-line-break and comment configurations. Used for internal testing.</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/testing.R'><code>R/testing.R</code></a></small>
+    <h1>Check whether a parse table contains a tilde</h1>
+    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/expr-is.R'><code>R/expr-is.R</code></a></small>
     </div>
 
     
-    <p>Generate a comprehensive collection test cases for comment / insertion
-interaction
-Test consist of if / if-else / if-else-if-else cases, paired with various
-line-break and comment configurations. Used for internal testing.</p>
+    <p>Check whether a parse table contains a tilde</p>
     
 
-    <pre class="usage"><span class='fu'>generate_test_samples</span>()</pre>
-        
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <pre class="usage"><span class='fu'>is_tilde_expr</span>(<span class='no'>pd</span>, <span class='kw'>tilde_pos</span> <span class='kw'>=</span> <span class='fu'>c</span>(<span class='fl'>1</span>, <span class='fl'>2</span>))
 
-    <p>The function is called for its side effects, i.e. to write the
-test cases to *-in.R files that can be tested with <code><a href='test_collection.html'>test_collection()</a></code>. Note
-that a few of the test cases are invalid and need to be removed / commented
-out manually.</p>
+<span class='fu'>is_asymmetric_tilde_expr</span>(<span class='no'>pd</span>)
+
+<span class='fu'>is_symmetric_tilde_expr</span>(<span class='no'>pd</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>pd</th>
+      <td><p>A parse table.</p></td>
+    </tr>
+    <tr>
+      <th>tilde_pos</th>
+      <td><p>Integer vector indicating row-indices that should be
+checked for tilde. See 'Details'.</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>A tilde is on the top row in the parse table if it is an asymmetric tilde
+expression (like <code>~column</code>), in the second row if it is a symmetric tilde
+expression (like <code>a~b</code>).</p>
     
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
           </ul>
 
   </div>
