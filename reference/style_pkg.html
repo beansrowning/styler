@@ -124,6 +124,7 @@ Carefully examine the results after running this function!" />
     <div class="page-header">
     <h1>Prettify R source code</h1>
     <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/ui.R'><code>R/ui.R</code></a></small>
+    <p class="hidden name"><code>style_pkg</code></p>
     </div>
 
     
@@ -179,6 +180,29 @@ excluded from styling.</p></td>
     <p>This function overwrites files (if styling results in a change of the
 code to be formatted). It is strongly suggested to only style files
 that are under version control or to create a backup copy.</p>
+<p>We suggest to first style with <code>scope &lt; "tokens"</code> and inspect and commit
+changes, because these changes are guaranteed to leave the abstract syntax
+tree (AST) unchanged. See section 'Roundtrip Validation' for details.</p>
+<p>Then, we suggest to style with <code>scope = "tokens"</code> (if desired) and carefully
+inspect the changes to make sure the AST is not changed in an unexpected way
+that invalidates code.</p>
+    
+    <h2 class="hasAnchor" id="roundtrip-validation"><a class="anchor" href="#roundtrip-validation"></a>Roundtrip Validation</h2>
+
+    
+    <p>The following section describes when and how styling is guaranteed to
+yield correct code.</p>
+<p>If the style guide has <code>scope &lt; "tokens"</code>, no tokens are changed and the
+abstract syntax tree (AST) should not change.
+Hence, it is possible to validate the styling by comparing whether the parsed
+expression before and after styling have the same AST.
+This comparison omits comments. styler does that internally and returns an
+error if the AST has changed through styling.</p>
+<p>Note that with <code>scope = "tokens"</code> such a comparison is not conducted because
+the AST might well change and such a change is intended. There is no way
+styler can validate styling, that is why we inform the user to carefully
+inspect the changes.</p>
+<p>See section 'Warning' for a good strategy to apply styling safely.</p>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
@@ -208,6 +232,8 @@ styling whether or not it was actually changed.</p>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#warning">Warning</a></li>
+
+      <li><a href="#roundtrip-validation">Roundtrip Validation</a></li>
 
       <li><a href="#value">Value</a></li>
 

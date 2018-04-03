@@ -1,6 +1,6 @@
 pandoc: 1.15.2
 pkgdown: 0.1.0.9000
-pkgdown_sha: 3a6077977555168d5a6d7a3dd586810971903b09
+pkgdown_sha: c86dc7fb3b6721fb31b040ba39804f0cbfb5bb42
 articles:
   customizing_styler: customizing_styler.html
   data_structures: gsoc_proposal/data_structures.html
