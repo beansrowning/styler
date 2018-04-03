@@ -18,7 +18,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-vignette">
+    <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -89,12 +89,12 @@
 
       
       </header><div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>An introduction to styler</h1>
                         <h4 class="author">Lorenz Walthert</h4>
             
-            <h4 class="date">2018-03-27</h4>
+            <h4 class="date">2018-04-03</h4>
       
       <small>Source: <a href="https://github.com/r-lib/styler/blob/master/vignettes/introducing_styler.Rmd"><code>vignettes/introducing_styler.Rmd</code></a></small>
 
@@ -102,7 +102,6 @@
 
     
     
-<div class="contents">
 <p>This vignette introduces the basic functionality of styler and showcases how styler applies a few rules of the <a href="http://style.tidyverse.org/index.html">tidyverse style guide</a> to example code. Note that you can create your own style guide and customize styler even further, as described in the vignette “Customizing styler”.</p>
 <p>It’s possible to use different levels of ‘invasiveness’, as described in the help file for the only style guide implemented so far, which is the <a href="http://style.tidyverse.org/index.html">tidyverse style guide</a>. The style guide in use is passed to the styling function (i.e <code><a href="../reference/style_text.html">style_text()</a></code> and friends) via the <code>style</code> argument, which defaults to <code>tidyverse_style</code>. In addition to this argument, there are further customization options. For example, we can limit ourselves to styling just spacing information by indicating this with the <code>scope</code> argument:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"styler"</span>)
@@ -257,7 +256,6 @@ mtcars %&gt;%
   # indent normally
   33
 }</code></pre>
-</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

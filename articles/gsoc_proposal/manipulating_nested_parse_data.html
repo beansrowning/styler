@@ -18,7 +18,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-vignette">
+    <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -89,12 +89,12 @@
 
       
       </header><div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Manipulating the nested parse table</h1>
                         <h4 class="author">Lorenz Walthert</h4>
             
-            <h4 class="date">2018-03-27</h4>
+            <h4 class="date">2018-04-03</h4>
       
       <small>Source: <a href="https://github.com/r-lib/styler/blob/master/vignettes/gsoc_proposal/manipulating_nested_parse_data.Rmd"><code>vignettes/gsoc_proposal/manipulating_nested_parse_data.Rmd</code></a></small>
 
@@ -102,7 +102,6 @@
 
     
     
-<div class="contents">
 <blockquote>
 <p>This vignette is partly outdated since nested structure was implemented completely. In particular, the serialization is now done differently.</p>
 </blockquote>
@@ -302,7 +301,6 @@ back_and_forth &lt;- not_indented %&gt;%
 identical(indented, back_and_forth)
 
 ## [1] TRUE</code></pre>
-</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

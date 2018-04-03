@@ -18,7 +18,7 @@
 <![endif]-->
 </head>
 <body>
-    <div class="container template-vignette">
+    <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -89,7 +89,7 @@
 
       
       </header><div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Performance Improvements</h1>
                         <h4 class="author">Lorenz Walthert</h4>
@@ -102,7 +102,6 @@
 
     
     
-<div class="contents">
 <p>We want to make styler faster.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(styler)
 microbenchmark::<span class="kw">microbenchmark</span>(
@@ -161,7 +160,6 @@ microbenchmark::<span class="kw">microbenchmark</span>(
 <span class="co">#&gt; Unit: milliseconds</span>
 <span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span>
 <span class="co">#&gt;  base 514.9392 520.5061 587.6329 530.3154 548.7248 989.3332    10</span></code></pre></div>
-</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
