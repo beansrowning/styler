@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Verify the text of strings — verify_str_txt • styler</title>
+<title>Ensure that the parse data is valid — ensure_valid_pd • styler</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -25,12 +25,11 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-<meta property="og:title" content="Verify the text of strings — verify_str_txt" />
+<meta property="og:title" content="Ensure that the parse data is valid — ensure_valid_pd" />
 
-<meta property="og:description" content="Make sure text of the tokens STR_CONST is correct and adapt if necessary.
-We first parse text again and include also non-terminal text. Then, we
-replace offending text in the terminal expressions with the text of their
-parents." />
+<meta property="og:description" content="Test whether all non-termnals have at least one child and throw an error
+otherwise. As this is check is rather expensive, it is only
+carried out for configurations we have good reasons to expect problems." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -123,31 +122,25 @@ parents." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Verify the text of strings</h1>
+    <h1>Ensure that the parse data is valid</h1>
     <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/parse.R'><code>R/parse.R</code></a></small>
-    <div class="hidden name"><code>verify_str_txt.Rd</code></div>
+    <div class="hidden name"><code>ensure_valid_pd.Rd</code></div>
     </div>
 
     
-    <p>Make sure <code>text</code> of the tokens <code>STR_CONST</code> is correct and adapt if necessary.
-We first parse <code>text</code> again and include also non-terminal text. Then, we
-replace offending <code>text</code> in the terminal expressions with the text of their
-parents.</p>
+    <p>Test whether all non-termnals have at least one child and throw an error
+otherwise. As this is check is rather expensive, it is only
+carried out for configurations we have good reasons to expect problems.</p>
     
 
-    <pre class="usage"><span class='fu'>verify_str_txt</span>(<span class='no'>pd_with_terminal_text</span>, <span class='no'>text</span>)</pre>
+    <pre class="usage"><span class='fu'>ensure_valid_pd</span>(<span class='no'>pd</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>pd_with_terminal_text</th>
+      <th>pd</th>
       <td><p>A parse table.</p></td>
-    </tr>
-    <tr>
-      <th>text</th>
-      <td><p>The text from which <code>pd_with_terminal_text</code> was created. Needed
-for potential reparsing.</p></td>
     </tr>
     </table>
     
