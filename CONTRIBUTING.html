@@ -289,7 +289,7 @@
 <p>You may have problems understanding some code because documentation is minimal, some code / functions seem to solve problems you don’t understand or handle cases that seem unreasonable or otherwise incomprehensible. You can resort to the following strategies:</p>
 <ul>
 <li>Use full-text search to see where functions are defined or called and how different parts of styler depend on it.</li>
-<li>Use <code>$git blame</code> to see where changes were introduced. Look at the commit message, check changes that were made to the code in the same commit. If you are using the GUI of GitHub, you can easily obtain more contextual information such as the pull request with which a change was introdued. Often functionality was introduced with testing. So you can easily see which new tests are related to the new functionality. You can remvoe the changes in the source code and re-run the tests and see what fails and why.</li>
+<li>Use <code>$git blame</code> to see where changes were introduced. Look at the commit message, check changes that were made to the code in the same commit. If you are using the GUI of GitHub, you can easily obtain more contextual information such as the pull request with which a change was introduced. Often functionality was introduced with testing. So, you can easily see which new tests are related to the new functionality. You can remove the changes in the source code and re-run the tests and see what fails and why.</li>
 <li>Search Issues and Pull Requests on GitHub with the full text search. Make sure you also search for closed Issues and PRs.</li>
 </ul>
 </div>
@@ -324,6 +324,14 @@
 <li>only very low-level functions or functions that don’t fit in any other file go to <code>utils.R</code>.</li>
 </ul>
 </div>
+<div id="control-flow" class="section level3">
+<h3 class="hasAnchor">
+<a href="#control-flow" class="anchor"></a>Control Flow</h3>
+<ul>
+<li>Conditional statements should always evaluate to <code>TRUE</code> or <code>FALSE</code>, i.e. we don’t encourage <code>if (length(x))</code> but rather <code>if (length(x) &gt; 0L)</code>.</li>
+<li>We avoid loops whenever possible and use functions like <code><a href="http://www.rdocumentation.org/packages/purrr/topics/map">purrr::map()</a></code> and friends when possible and prefer them over R base counterparts like <code><a href="http://www.rdocumentation.org/packages/base/topics/lapply">base::lapply()</a></code>.</li>
+</ul>
+</div>
 <div id="boolean-values" class="section level3">
 <h3 class="hasAnchor">
 <a href="#boolean-values" class="anchor"></a>Boolean Values</h3>
@@ -333,6 +341,11 @@
 <h3 class="hasAnchor">
 <a href="#vectors-with-indices" class="anchor"></a>Vectors with indices</h3>
 <p>Vectors that hold indices are often suffixed with <code>idx</code>. <code>else_idx</code> for example indicates for every row in a parse table whether it contains an <code>else</code> token.</p>
+</div>
+<div id="closures" class="section level3">
+<h3 class="hasAnchor">
+<a href="#closures" class="anchor"></a>Closures</h3>
+<p>The use of closures is discouraged. We prefer to prefill a template function with <code><a href="http://www.rdocumentation.org/packages/purrr/topics/partial">purrr::partial()</a></code>.</p>
 </div>
 </div>
 
