@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Applying reference indention of a target token — apply_ref_indention_one" />
 
 <meta property="og:description" content="Applies the indention level of target_token to all tokens that have
@@ -41,8 +44,6 @@ on that line so they are kept updated." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -124,16 +125,18 @@ on that line so they are kept updated." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Applying reference indention of a target token</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/reindent.R'><code>R/reindent.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/reindent.R'><code>R/reindent.R</code></a></small>
     <div class="hidden name"><code>apply_ref_indention_one.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Applies the indention level of <code>target_token</code> to all tokens that have
 <code>target_token</code> as a reference. This includes adding spaces to the first
 tokens on a line and updating the column <code>col1</code> and <code>col2</code> for all tokens
 on that line so they are kept updated.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>apply_ref_indention_one</span>(<span class='no'>flattened_pd</span>, <span class='no'>target_token</span>)</pre>
     

@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Identify comments that are shebangs — is_shebang" />
 
 <meta property="og:description" content="Shebangs should be preserved and no space should be inserted between
@@ -40,8 +43,6 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -123,15 +124,17 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Identify comments that are shebangs</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/expr-is.R'><code>R/expr-is.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/expr-is.R'><code>R/expr-is.R</code></a></small>
     <div class="hidden name"><code>is_shebang.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Shebangs should be preserved and no space should be inserted between
 # and !. A comment is a shebang if it is the first top level token
 (identified with <code>pos_id</code>) and if it starts with <code>#!</code>.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>is_shebang</span>(<span class='no'>pd</span>)</pre>
     

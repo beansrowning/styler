@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Flatten a parse table — flatten_pd" />
 
 <meta property="og:description" content="Flattens a parse table if certain tokens occur in this table or its child,
@@ -42,8 +45,6 @@ is returned unmodified." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -125,10 +126,11 @@ is returned unmodified." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Flatten a parse table</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/relevel.R'><code>R/relevel.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/relevel.R'><code>R/relevel.R</code></a></small>
     <div class="hidden name"><code>flatten_pd.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Flattens a parse table if certain tokens occur in this table or its child,
 either flattening from left or from right. If one of <code>token</code> is present in
@@ -136,6 +138,7 @@ either flattening from left or from right. If one of <code>token</code> is prese
 to <code>token</code> in <code>pd_nested</code>, the nested parse table is flattened. Otherwise, it
 is returned unmodified.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>flatten_pd</span>(<span class='no'>pd_nested</span>, <span class='no'>token</span>, <span class='kw'>child_token</span> <span class='kw'>=</span> <span class='no'>token</span>, <span class='kw'>left</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     

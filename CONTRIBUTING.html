@@ -25,6 +25,9 @@
 <link href="pkgdown.css" rel="stylesheet">
 <script src="jquery.sticky-kit.min.js"></script>
 <script src="pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="NA" />
 
 
@@ -35,8 +38,6 @@
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -130,10 +131,10 @@
 <h2 class="hasAnchor">
 <a href="#how-to-dive-in-and-understanding-the-source-code" class="anchor"></a>How to dive in and understanding the source code</h2>
 <p>Read the vignettes. If you are done, come back here.</p>
-<p><code>devtools::load_all()</code></p>
+<p><code><a href="http://www.rdocumentation.org/packages/devtools/topics/load_all">devtools::load_all()</a></code></p>
 <p><code>debug(style_text)</code></p>
 <p><code><a href="reference/style_text.html">style_text("call(1, 2 + 1)")</a></code></p>
-<p>Go broad before you go deep. Before going into the very deep layers of function calls of <code><a href="reference/style_text.html">style_text()</a></code>, try to understand that <code><a href="reference/style_text.html">style_text()</a></code> consists of a few function calls only. Go into each of them and try to understand one layer deep. That is, try to understand what <code><a href="reference/make_transformer.html">make_transformer()</a></code> does by reading the names of the functions that get called, the name of the objects that are created by assigning the output of these function calls. Before looking into a functions source code, look at the documentation for that function. All internal important functions are documented and documentation is available also for unexported objects via <code>?</code> (if you did <code>devtools::load_all()</code>. Then, go into <code><a href="reference/parse_transform_serialize.html">parse_transform_serialize()</a></code> and so on.</p>
+<p>Go broad before you go deep. Before going into the very deep layers of function calls of <code><a href="reference/style_text.html">style_text()</a></code>, try to understand that <code><a href="reference/style_text.html">style_text()</a></code> consists of a few function calls only. Go into each of them and try to understand one layer deep. That is, try to understand what <code><a href="reference/make_transformer.html">make_transformer()</a></code> does by reading the names of the functions that get called, the name of the objects that are created by assigning the output of these function calls. Before looking into a functions source code, look at the documentation for that function. All internal important functions are documented and documentation is available also for unexported objects via <code>?</code> (if you did <code><a href="http://www.rdocumentation.org/packages/devtools/topics/load_all">devtools::load_all()</a></code>. Then, go into <code><a href="reference/parse_transform_serialize.html">parse_transform_serialize()</a></code> and so on.</p>
 <p>To understand the most fundamental operation in styler, the manipulation of the columns related to spacing and line break information, pick a rule from <code>R/rules-*.R</code>, e.g. <code>R/rules-spacing</code>, add a break point to a rule and style a string where you think this rule will be active. Then, see what happens and how this rule is applied on each level of nesting.</p>
 </div>
 <div id="static-code-analysis" class="section level2">

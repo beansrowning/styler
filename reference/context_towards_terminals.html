@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Update the a parse table given outer context — context_towards_terminals" />
 
 <meta property="og:description" content="outer_lag_newlines are added to the first token in pd,
@@ -41,8 +44,6 @@ which means the propagation of the parse information to the terminal tokens." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -124,16 +125,18 @@ which means the propagation of the parse information to the terminal tokens." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Update the a parse table given outer context</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/visit.R'><code>R/visit.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/visit.R'><code>R/visit.R</code></a></small>
     <div class="hidden name"><code>context_towards_terminals.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p><code>outer_lag_newlines</code> are added to the first token in <code>pd</code>,
 <code>outer_indent</code> is added to all tokens in <code>pd</code>, <code>outer_spaces</code> is added to the
 last token in <code>pd</code>. <code><a href='context_to_terminals.html'>context_to_terminals()</a></code> calls this function repeatedly,
 which means the propagation of the parse information to the terminal tokens.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>context_towards_terminals</span>(<span class='no'>pd_nested</span>, <span class='no'>outer_lag_newlines</span>, <span class='no'>outer_indent</span>,
   <span class='no'>outer_spaces</span>, <span class='no'>outer_indention_refs</span>)</pre>

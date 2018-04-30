@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Style <code>.R</code> and/or <code>.Rmd</code> files — style_file" />
 
 <meta property="og:description" content="Performs various substitutions in the files specified.
@@ -39,8 +42,6 @@ Carefully examine the results after running this function!" />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -122,14 +123,16 @@ Carefully examine the results after running this function!" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Style <code>.R</code> and/or <code>.Rmd</code> files</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/ui.R'><code>R/ui.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/ui.R'><code>R/ui.R</code></a></small>
     <div class="hidden name"><code>style_file.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Performs various substitutions in the files specified.
 Carefully examine the results after running this function!</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>style_file</span>(<span class='no'>path</span>, <span class='no'>...</span>, <span class='kw'>style</span> <span class='kw'>=</span> <span class='no'>tidyverse_style</span>, <span class='kw'>transformers</span> <span class='kw'>=</span> <span class='fu'>style</span>(<span class='no'>...</span>))</pre>
     
@@ -207,7 +210,7 @@ inspect the changes.</p>
 <span class='no'>file</span> <span class='kw'>&lt;-</span> <span class='fu'>tempfile</span>(<span class='st'>"styler"</span>, <span class='kw'>fileext</span> <span class='kw'>=</span> <span class='st'>".R"</span>)
 <span class='kw pkg'>enc</span><span class='kw ns'>::</span><span class='fu'><a href='http://www.rdocumentation.org/packages/enc/topics/write_lines_enc'>write_lines_enc</a></span>(<span class='st'>"1++1"</span>, <span class='no'>file</span>)
 <span class='fu'>style_file</span>(<span class='no'>file</span>, <span class='kw'>style</span> <span class='kw'>=</span> <span class='no'>tidyverse_style</span>, <span class='kw'>strict</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; Styling  1  files:
-#&gt;  styler334b7211f8e7.R ℹ 
+#&gt;  styler319c618b3a52.R ℹ 
 #&gt; ────────────────────────────────────────
 #&gt; Status	Count	Legend 
 #&gt; ✔ 	0	File unchanged.
@@ -215,7 +218,7 @@ inspect the changes.</p>
 #&gt; ✖ 	0	Styling threw an error.
 #&gt; ────────────────────────────────────────
 #&gt; Please review the changes carefully!</div><div class='input'><span class='fu'>style_file</span>(<span class='no'>file</span>, <span class='kw'>transformers</span> <span class='kw'>=</span> <span class='fu'><a href='tidyverse_style.html'>tidyverse_style</a></span>(<span class='kw'>strict</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>))</div><div class='output co'>#&gt; Styling  1  files:
-#&gt;  styler334b7211f8e7.R ✔ 
+#&gt;  styler319c618b3a52.R ✔ 
 #&gt; ────────────────────────────────────────
 #&gt; Status	Count	Legend 
 #&gt; ✔ 	1	File unchanged.

@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Ensure a correct <code>text</code> of all strings — ensure_correct_str_txt" />
 
 <meta property="og:description" content="Make sure text of the tokens STR_CONST is correct and adapt if necessary.
@@ -41,8 +44,6 @@ parents if their line / col position matches and return an error otherwise." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -124,16 +125,18 @@ parents if their line / col position matches and return an error otherwise." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Ensure a correct <code>text</code> of all strings</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/parse.R'><code>R/parse.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/parse.R'><code>R/parse.R</code></a></small>
     <div class="hidden name"><code>ensure_correct_str_txt.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Make sure <code>text</code> of the tokens <code>STR_CONST</code> is correct and adapt if necessary.
 We first parse <code>text</code> again and include also non-terminal text. Then, we
 replace offending <code>text</code> in the terminal expressions with the text of their
 parents if their line / col position matches and return an error otherwise.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>ensure_correct_str_txt</span>(<span class='no'>pd</span>, <span class='no'>text</span>)</pre>
     

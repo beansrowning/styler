@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Identifies raw R code chunks — identify_r_raw_chunks" />
 
 <meta property="og:description" content="Raw in the sense that these chunks don't contain pure R code, but they
@@ -40,8 +43,6 @@ whose name matches engine-pattern are considered as R code." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -123,15 +124,17 @@ whose name matches engine-pattern are considered as R code." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Identifies raw R code chunks</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/transform-code.R'><code>R/transform-code.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/transform-code.R'><code>R/transform-code.R</code></a></small>
     <div class="hidden name"><code>identify_r_raw_chunks.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Raw in the sense that these chunks don't contain pure R code, but they
 contain a header and footer of markdown. Only code chunks that have an engine
 whose name matches <code>engine-pattern</code> are considered as R code.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>identify_r_raw_chunks</span>(<span class='no'>lines</span>, <span class='kw'>engine_pattern</span> <span class='kw'>=</span> <span class='fu'><a href='get_engine_pattern.html'>get_engine_pattern</a></span>())</pre>
     

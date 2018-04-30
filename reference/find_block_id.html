@@ -25,6 +25,9 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
+
+
+
 <meta property="og:title" content="Find the block to which a token belongs — find_block_id" />
 
 <meta property="og:description" content="Two assignment tokens EQ_ASSIGN belong to the same block if they are not
@@ -41,8 +44,6 @@ EQ_ASSING already belongs to the EQ_ASSING after it." />
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
-
 
 
   </head>
@@ -124,16 +125,18 @@ EQ_ASSING already belongs to the EQ_ASSING after it." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Find the block to which a token belongs</h1>
-    <small>Source: <a href='https://github.com/r-lib/styler/blob/master/R/relevel.R'><code>R/relevel.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/styler/blob/master/R/relevel.R'><code>R/relevel.R</code></a></small>
     <div class="hidden name"><code>find_block_id.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Two assignment tokens <code>EQ_ASSIGN</code> belong to the same block if they are not
 separated by more than one token. Token between <code>EQ_ASSIGN</code> tokens belong
 to the <code>EQ_ASSIGN</code> token occurring before them, except the token right before
 <code>EQ_ASSING</code> already belongs to the <code>EQ_ASSING</code> after it.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>find_block_id</span>(<span class='no'>pd</span>)</pre>
     
