@@ -104,63 +104,63 @@
     
     
 <p>We want to make styler faster.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(styler)
-microbenchmark::<span class="kw">microbenchmark</span>(
-  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),
-  <span class="dt">times =</span> <span class="dv">2</span>
-)
-<span class="co">#&gt; Unit: seconds</span>
-<span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span>
-<span class="co">#&gt;  base 4.131253 4.131253 4.172017 4.172017 4.212781 4.212781     2</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(styler)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  <span class="dt">times =</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt; Unit: seconds</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt;  base 4.131253 4.131253 4.172017 4.172017 4.212781 4.212781     2</span></a></code></pre></div>
 <p>Replacing mutate statments.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark::<span class="kw">microbenchmark</span>(
-  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),
-  <span class="dt">times =</span> <span class="dv">2</span>
-)
-<span class="co">#&gt; Unit: seconds</span>
-<span class="co">#&gt;  expr     min      lq     mean   median       uq      max neval</span>
-<span class="co">#&gt;  base 2.13616 2.13616 2.223659 2.223659 2.311158 2.311158     2</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">  <span class="dt">times =</span> <span class="dv">2</span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; Unit: seconds</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;  expr     min      lq     mean   median       uq      max neval</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;  base 2.13616 2.13616 2.223659 2.223659 2.311158 2.311158     2</span></a></code></pre></div>
 <p>Move <code>opening</code> argument out of needs indention.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark::<span class="kw">microbenchmark</span>(
-  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),
-  <span class="dt">times =</span> <span class="dv">5</span>
-)
-
-<span class="co">#&gt; Unit: seconds</span>
-<span class="co">#&gt;  expr     min       lq     mean   median       uq      max neval</span>
-<span class="co">#&gt;  base 2.18097 2.184721 2.225294 2.200893 2.241799 2.318089     5</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="dt">times =</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; Unit: seconds</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt;  expr     min       lq     mean   median       uq      max neval</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt;  base 2.18097 2.184721 2.225294 2.200893 2.241799 2.318089     5</span></a></code></pre></div>
 <p>Dropping unnecessary select and arrange stuffstatments</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark::<span class="kw">microbenchmark</span>(
-  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),
-  <span class="dt">times =</span> <span class="dv">5</span>
-)
-<span class="co">#&gt; Unit: seconds</span>
-<span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span>
-<span class="co">#&gt;  base 2.109271 2.134377 2.147821 2.158567 2.165384 2.171505     5</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">  <span class="dt">times =</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; Unit: seconds</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;  base 2.109271 2.134377 2.147821 2.158567 2.165384 2.171505     5</span></a></code></pre></div>
 <p>Some more stuff (early return, purr)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark::<span class="kw">microbenchmark</span>(
-  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),
-  <span class="dt">times =</span> <span class="dv">5</span>
-)
-<span class="co">#&gt; Unit: milliseconds</span>
-<span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span>
-<span class="co">#&gt;  base 930.4391 944.9253 969.2838 951.4632 951.6571 1067.934     5</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">  <span class="dt">times =</span> <span class="dv">5</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt; Unit: milliseconds</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  base 930.4391 944.9253 969.2838 951.4632 951.6571 1067.934     5</span></a></code></pre></div>
 <p>Various changes (positive and negative in terms of speed)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark::<span class="kw">microbenchmark</span>(
-  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),
-  <span class="dt">times =</span> <span class="dv">10</span>
-)
-<span class="co">#&gt; Unit: seconds</span>
-<span class="co">#&gt; expr      min       lq     mean   median       uq      max neval</span>
-<span class="co">#&gt;  base 1.235749 1.259139 1.269869 1.269396 1.275887 1.330341    10</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">  <span class="dt">times =</span> <span class="dv">10</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt; Unit: seconds</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt; expr      min       lq     mean   median       uq      max neval</span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  base 1.235749 1.259139 1.269869 1.269396 1.275887 1.330341    10</span></a></code></pre></div>
 <p>Removed tibble bottlenecks (tibble 1.4.2, <a href="https://github.com/tidyverse/tibble/pull/348" class="uri">https://github.com/tidyverse/tibble/pull/348</a>)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">microbenchmark::<span class="kw">microbenchmark</span>(
-  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),
-  <span class="dt">times =</span> <span class="dv">10</span>
-)
-<span class="co">#&gt; Unit: milliseconds</span>
-<span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span>
-<span class="co">#&gt;  base 514.9392 520.5061 587.6329 530.3154 548.7248 989.3332    10</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">microbenchmark<span class="op">::</span><span class="kw">microbenchmark</span>(</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">  <span class="dt">base =</span> <span class="kw"><a href="../reference/style_file.html">style_file</a></span>(<span class="st">"tests/testthat/indention_multiple/overall-in.R"</span>),</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">  <span class="dt">times =</span> <span class="dv">10</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">)</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; Unit: milliseconds</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt;  expr      min       lq     mean   median       uq      max neval</span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt;  base 514.9392 520.5061 587.6329 530.3154 548.7248 989.3332    10</span></a></code></pre></div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

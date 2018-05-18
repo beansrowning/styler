@@ -102,16 +102,16 @@
 
 <p>The goal of styler is to provide non-invasive pretty-printing of R source code while adhering to the <a href="https://github.com/tidyverse/style">tidyverse</a> formatting rules. Support for custom style guides is planned.</p>
 <p>You can install the package from CRAN:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"styler"</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">"styler"</span>)</a></code></pre></div>
 <p>Or get the development version from GitHub:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("remotes")</span>
-remotes::<span class="kw">install_github</span>(<span class="st">"r-lib/styler"</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># install.packages("remotes")</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">remotes<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"r-lib/styler"</span>)</a></code></pre></div>
 <p>You can style a simple character vector of code with <code><a href="reference/style_text.html">style_text()</a></code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ugly_code &lt;-<span class="st"> "a&lt;-function( x){1+1}           "</span>
-<span class="kw"><a href="reference/style_text.html">style_text</a></span>(ugly_code)
-<span class="co">#&gt; a &lt;- function(x) {</span>
-<span class="co">#&gt;   1 + 1</span>
-<span class="co">#&gt; }</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">ugly_code &lt;-<span class="st"> "a&lt;-function( x){1+1}           "</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="reference/style_text.html">style_text</a></span>(ugly_code)</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; a &lt;- function(x) {</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;   1 + 1</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; }</span></a></code></pre></div>
 <p>There are a few variants of <code><a href="reference/style_text.html">style_text()</a></code>:</p>
 <ul>
 <li>
